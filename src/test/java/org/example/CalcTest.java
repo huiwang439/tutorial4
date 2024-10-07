@@ -3,7 +3,17 @@ package org.example;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-public class CalcTest {
+class Calc {
+    public int add(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public int subtract(int num1, int num2) {
+        return num1 - num2;
+    }
+}
+
+class CalcTest {
     Calc c = new Calc();
 
     @Test
@@ -13,6 +23,6 @@ public class CalcTest {
 
     @Test
     void testSubtraction() {
-        assertEquals(2, c.subtract(4, 2)); // 检查 4 - 2 是否等于 2
+        assertEquals(2, c.subtract(4, 2));
     }
 }
